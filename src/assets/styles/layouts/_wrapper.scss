@@ -1,0 +1,9 @@
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @include media-tablet {
+    padding: 2rem 3rem;
+  }
+}

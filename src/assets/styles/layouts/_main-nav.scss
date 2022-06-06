@@ -1,0 +1,120 @@
+.main-nav--opened {
+  & .main-nav__toggle::before {
+    top: 45%;
+    transform: rotate(45deg);
+  }
+
+  & .main-nav__toggle::after {
+    top: 45%;
+    transform: rotate(-45deg);
+  }
+
+  .main-nav__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    opacity: 1;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+
+  @include media-mobile-only {
+    position: relative;
+
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $white;
+      transition: all .3s ease-out;
+    }
+
+    &::before {
+      top: 35%;
+    }
+
+    &::after {
+      top: 60%;
+    }
+  }
+}
+
+.main-nav__inner {
+  @include media-mobile-only {
+    position: fixed;
+    left: 0;
+
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    background-color: $gray-light;
+    opacity: 0;
+    // overflow: auto;
+
+    transition: all .3s ease-out;
+  }
+}
+
+.main-nav__list {
+  @include reset-list;
+}
+
+.main-nav__list--opened {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 0.5;
+  //   overflow: hidden;
+
+  @for $i from 1 through 3 {
+    li:nth-of-type(#{$i}) {
+      animation: show .5s .2s + $i/8 forwards;
+      -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -moz-animation: show .5s .2s + $i/8 forwards;
+      -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+}
+
+.main-nav__item {
+  @include media-mobile-only {
+    opacity: 0;
+    transform: matrix(1.5, 0, 0, 1, 0, 0);
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.82rem;
+  text-decoration: none;
+  color: $white;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: matrix(1.5, 0, 0, 1, 0, 20);
+  }
+
+  100% {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}

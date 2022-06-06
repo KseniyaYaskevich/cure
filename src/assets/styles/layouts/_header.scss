@@ -1,0 +1,24 @@
+.page__body--lock .page-header {
+  background-color: $gray-light;
+}
+
+.page-header {
+  position: fixed;
+  z-index: 10;
+
+  width: 100%;
+
+  & .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-header__logo {
+
+  & svg {
+    width: 5.5rem;
+    height: 2rem;
+  }
+}
