@@ -1,5 +1,7 @@
 .page__body--lock .page-header {
-  background-color: $gray-light;
+  @include media-mobile-only {
+    background-color: $gray-light;
+  }
 }
 
 .page-header {

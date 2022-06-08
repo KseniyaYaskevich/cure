@@ -1,3 +1,8 @@
+.main-nav {
+  @include media-tablet {
+    flex-basis: 66%;
+  }
+}
 .main-nav--opened {
   & .main-nav__toggle::before {
     top: 45%;
@@ -10,11 +15,13 @@
   }
 
   .main-nav__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include media-mobile-only {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
-    opacity: 1;
+      opacity: 1;
+    }
   }
 }
 
@@ -69,25 +76,38 @@
 
     transition: all .3s ease-out;
   }
+
+  @include media-tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .main-nav__list {
   @include reset-list;
+
+  @include media-tablet {
+    display: flex;
+
+  }
 }
 
 .main-nav__list--opened {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 0.5;
-  //   overflow: hidden;
+  @include media-mobile-only {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 0.5;
+    //   overflow: hidden;
 
-  @for $i from 1 through 3 {
-    li:nth-of-type(#{$i}) {
-      animation: show .5s .2s + $i/8 forwards;
-      -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      -moz-animation: show .5s .2s + $i/8 forwards;
-      -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    @for $i from 1 through 3 {
+      li:nth-of-type(#{$i}) {
+        animation: show .5s .01s + $i/8 forwards;
+        // -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -moz-animation: show .5s .01s + $i/8 forwards;
+        // -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
     }
   }
 }
@@ -104,6 +124,10 @@
   padding: 1rem;
   font-size: 1.82rem;
   text-decoration: none;
+
+  @include media-tablet {
+    font-size: 0.9rem;
+  }
   color: $white;
 }
 
