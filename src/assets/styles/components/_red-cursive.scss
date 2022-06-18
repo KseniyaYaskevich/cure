@@ -1,0 +1,10 @@
+.red-cursive {
+  display: inline-block;
+
+  @include font($size: 4.2rem, $weight: 400);
+  font-family: "Northwell";
+  white-space: nowrap;
+  color: $danger;
+
+  transform: translateY(-55%) rotate(-16deg);
+}
