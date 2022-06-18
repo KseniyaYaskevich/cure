@@ -5,12 +5,6 @@
 }
 
 .main-nav--opened {
-  .main-nav__toggle {
-    &:hover {
-      transform: rotate(90deg);
-    }
-  }
-
   & .main-nav__toggle::before {
     top: 45%;
     transform: rotate(45deg);
