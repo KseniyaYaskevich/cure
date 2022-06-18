@@ -53,7 +53,9 @@ img {
   }
 
   &--lock {
-    overflow: hidden;
+    @include media-mobile-only {
+      overflow: hidden;
+    }
   }
 }
 
