@@ -5,13 +5,13 @@ const mainNavList = navMain.querySelector('.main-nav__list');
 const closeMenu = () => {
   document.body.classList.remove('page__body--lock');
   navMain.classList.remove('main-nav--opened');
-  mainNavList.classList.remove('main-nav__list--opened');
+  mainNavList.classList.remove('_active');
 }
 
 const onNavToggleClick = () => {
   document.body.classList.toggle('page__body--lock');
   navMain.classList.toggle('main-nav--opened');
-  mainNavList.classList.toggle('main-nav__list--opened');
+  mainNavList.classList.toggle('_active');
 };
 
 const onMainNavListClick = (evt) => {
