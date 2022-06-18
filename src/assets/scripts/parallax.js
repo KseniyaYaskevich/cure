@@ -1,4 +1,6 @@
 const parallaxWrapper = document.querySelector('.parallax__wrapper');
+const animItems = document.querySelectorAll("[data-type='anim-item']");
+const mediaQuery = window.matchMedia('(min-width: 768px)');
 
 const offset = (el) => {
   const rect = el.getBoundingClientRect(),
