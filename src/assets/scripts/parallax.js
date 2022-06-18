@@ -37,11 +37,32 @@ const animOnScroll = () => {
 
 animOnScroll();
 
-let scrollPosition = 0;
+const parallaxOnScroll = () => {
+  let translate;
+  const distanceY = window.scrollY;
+  const layers = document.querySelectorAll("[data-type='parallax']");
+  const imageWrappers = document.querySelectorAll("[data-type='parallax-background']");
 
-document.addEventListener('scroll', function () {
-  scrollPosition = window.pageYOffset;
-  parallaxWrapper.style.transform = 'translate3d(0px,' + scrollPosition / 3 + 'px, 0px) scale(' + +(1 + scrollPosition / 2000) + ')';
-});
+
+  layers.forEach((layer) => {
+    if (mediaQuery.matches) {
+      const depth = layer.getAttribute('data-depth');
+      const movement = `${-(distanceY * depth)}px`;
+      translate = `translate(0, ${movement})`;
+    } else {
+      translate = `translate(0, 0)`;
+    }
+    layer.style.transform = translate;
+  });
+
+  imageWrappers.forEach((wrapper) => {
+    const depth = wrapper.getAttribute('data-depth');
+    const movement = `${(distanceY * depth)}px`;
+    const scale = `${(1 + distanceY / 3000)}`;
+    translate = `translate3d(0px, ${movement}, 0px) scale(${scale})`;
+    wrapper.style.transform = translate;
+  });
+};
 
 window.addEventListener('scroll', animOnScroll);
+window.addEventListener('scroll', parallaxOnScroll);
