@@ -65,6 +65,7 @@
     position: fixed;
     left: 0;
     align-items: center;
+
     display: none;
     width: 100%;
     height: 100%;
@@ -74,7 +75,6 @@
     text-align: center;
     background-color: $gray-light;
     opacity: 0;
-    // overflow: auto;
 
     transition: all .3s ease-out;
   }
@@ -89,26 +89,18 @@
 .main-nav__list {
   @include reset-list;
 
-  @include media-tablet {
-    display: flex;
+  display: flex;
 
-  }
-}
+  &._active {
+    @include media-mobile-only {
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 0.5;
 
-.main-nav__list--opened {
-  @include media-mobile-only {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 0.5;
-    //   overflow: hidden;
-
-    @for $i from 1 through 3 {
-      li:nth-of-type(#{$i}) {
-        animation: show .5s .01s + $i/8 forwards;
-        // -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        -moz-animation: show .5s .01s + $i/8 forwards;
-        // -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      @for $i from 1 to 4 {
+        li:nth-of-type(#{$i}) {
+          animation: show .5s .01s + $i/8 forwards;
+        }
       }
     }
   }
@@ -132,10 +124,6 @@
   white-space: nowrap;
   color: $white;
 
-  @include media-tablet {
-    font-size: 0.9rem;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -153,6 +141,10 @@
 
   &:hover::after {
     transform: scale(1);
+  }
+
+  @include media-tablet {
+    font-size: 0.9rem;
   }
 }
 
