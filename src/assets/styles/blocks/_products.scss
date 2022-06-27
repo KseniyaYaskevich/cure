@@ -1,0 +1,40 @@
+.products {
+  padding-top: 3rem;
+  background-color: $green;
+
+  & .wrapper {
+    text-align: center;
+  }
+}
+
+.products__title {
+  @include font($size: 3.4rem);
+  color: $white;
+}
+
+.products__subtitle {
+  color: $red-light;
+}
+
+.products__link {
+  display: inline-block;
+  padding-bottom: 2rem;
+
+  @include font($size: 1.8rem);
+  color: $red-light;
+}
+
+.products__swiper {
+  padding-left: 2rem;
+
+  transform: translateY(4rem);
+}
+
+.products__slide {
+  width: 50vw;
+
+  & img {
+    height: 70vw;
+    width: 100%;
+  }
+}
