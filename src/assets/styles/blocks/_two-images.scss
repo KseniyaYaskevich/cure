@@ -5,6 +5,7 @@
     position: absolute;
     right: 14vw;
     bottom: -17vw;
+    z-index: 1;
 
     height: 44vw;
     width: 43vw;
@@ -64,4 +65,13 @@
 
 .two-images__layer-2 {
   background-image: url("~images/img-mood-2.jpg");
+}
+
+
+.two-images__layer-3 {
+  background-image: url("~images/img-mood-3.jpg");
+}
+
+.two-images__layer-4 {
+  background-image: url("~images/img-mood-4.jpg");
 }
