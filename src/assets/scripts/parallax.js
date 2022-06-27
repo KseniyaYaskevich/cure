@@ -39,15 +39,15 @@ animOnScroll();
 
 const parallaxOnScroll = () => {
   let translate;
-  const distanceY = window.scrollY;
+  const distanceY = window.pageYOffset;
   const layers = document.querySelectorAll("[data-type='parallax']");
   const imageWrappers = document.querySelectorAll("[data-type='parallax-background']");
 
-
   layers.forEach((layer) => {
-    if (mediaQuery.matches) {
+    if (mediaQuery.matches && layer.closest('._active')) {
+      const layerOffset = offset(layer).top;
       const depth = layer.getAttribute('data-depth');
-      const movement = `${-(distanceY * depth)}px`;
+      const movement = `${((layerOffset - distanceY) * depth)}px`;
       translate = `translate(0, ${movement})`;
     } else {
       translate = `translate(0, 0)`;
