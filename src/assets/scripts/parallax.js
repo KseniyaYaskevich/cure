@@ -18,7 +18,6 @@ const animOnScroll = () => {
     const animItemHeight = animItem.offsetHeight;
     const animItemOffset = offset(animItem).top;
     const animStart = animItem.getAttribute('data-anim-start');
-
     let animItemPoint = window.innerHeight - animItemHeight / animStart;
 
     if (animItemHeight > window.innerHeight / animStart) {
@@ -27,6 +26,10 @@ const animOnScroll = () => {
 
     if ((window.pageYOffset > animItemOffset - animItemPoint) && window.pageYOffset < (animItemOffset + animItemHeight)) {
       animItem.classList.add('_active');
+    } else if (animItem.classList.contains('is-parallax')) {
+      if (animItem.getBoundingClientRect().top > 1000 || animItem.getBoundingClientRect().bottom < -100) {
+        animItem.classList.remove('_active');
+      }
     } else if (animItem.getBoundingClientRect().top <= 0) {
       animItem.classList.add('_active');
     } else {
