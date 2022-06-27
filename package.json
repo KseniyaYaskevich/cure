@@ -37,7 +37,8 @@
     "webpack-dev-server": "^4.8.0"
   },
   "dependencies": {
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "swiper": "^8.2.4"
   },
   "main": ".eslintrc.js",
   "repository": {
