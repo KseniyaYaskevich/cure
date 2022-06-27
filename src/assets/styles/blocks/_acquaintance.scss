@@ -81,7 +81,7 @@
   left: 1rem;
 
   @include media-tablet {
-    top: 44%;
+    top: 15%;
     left: 15%;
   }
 }
@@ -136,7 +136,7 @@
 
   @include media-tablet {
     position: absolute;
-    top: 44%;
+    top: 15%;
     left: 65%;
 
     padding: 0;
@@ -213,6 +213,6 @@
 
   100% {
     opacity: 1;
-    transform: translate(0px, 0);
+    transform: translate(0px, 0px);
   }
 }

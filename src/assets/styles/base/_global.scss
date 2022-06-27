@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  // display: grid;
+  // grid-template-rows: min-content 1fr min-content;
   height: 100vh;
   width: 100%;
   min-width: $min-width;
