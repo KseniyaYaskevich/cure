@@ -149,29 +149,13 @@
 }
 
 .main-nav__book-link {
-  position: relative;
-  padding: 1rem;
-
   @include font($size: 0.9rem, $weight: bold);
-  text-decoration: none;
-  white-space: nowrap;
+
   color: $white;
 
   &::after {
-    content: "";
-    position: absolute;
     top: 70%;
-    left: 10px;
-
-    height: 2px;
-    width: calc(100% - 20px);
-
     background-color: $danger;
-    transition: transform .4s ease-out;
-  }
-
-  &:hover::after {
-    transform: scale(0);
   }
 }
 
