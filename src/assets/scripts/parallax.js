@@ -1,16 +1,7 @@
-const parallaxWrapper = document.querySelector('.parallax__wrapper');
+import {offset} from "./util";
+
 const animItems = document.querySelectorAll("[data-type='anim-item']");
 const mediaQuery = window.matchMedia('(min-width: 768px)');
-
-const offset = (el) => {
-  const rect = el.getBoundingClientRect(),
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return {
-    top: rect.top + scrollTop,
-    left: rect.left + scrollLeft
-  };
-};
 
 const animOnScroll = () => {
   for (let index = 0; index < animItems.length; index++) {
