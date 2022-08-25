@@ -38,7 +38,7 @@ const onMainNavListClick = (evt) => {
   const scrollTarget = document.querySelector(id);
 
   if (scrollTarget !== null) {
-    const topOffset = document.querySelector('.page-header').offsetHeight;
+    const topOffset = pageHeader.offsetHeight;
     const elementPosition = scrollTarget.getBoundingClientRect().top;
     const offsetPosition = elementPosition - topOffset;
 
