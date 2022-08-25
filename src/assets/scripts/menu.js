@@ -34,6 +34,27 @@ const onMainNavListClick = (evt) => {
   } else return;
 };
 
+const menuOnScroll = () => {
+  const windowY = window.pageYOffset;
+  const pageSections = document.querySelectorAll('section');
+
+  if (windowY > 10) {
+    pageHeader.classList.add('is-scrolled');
+  } else {
+    pageHeader.classList.remove('is-scrolled');
+  }
+  pageSections.forEach(section => {
+    const sectionOffTop = offset(section).top;
+    const sectionOffBtm = offset(section).top + section.offsetHeight;
+
+    if (windowY >= sectionOffTop && windowY <= sectionOffBtm) {
+      const sectionColor = window.getComputedStyle(section).backgroundColor;
+      pageHeader.style.backgroundColor = sectionColor;
+      colorHeader(sectionColor);
+    }
+  });
+};
+
 if (navToggle) {
   navToggle.addEventListener('click', onNavToggleClick);
 }
