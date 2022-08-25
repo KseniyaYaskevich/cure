@@ -79,3 +79,5 @@ if (navToggle) {
 if (navMain) {
   mainNavList.addEventListener('click', onMainNavListClick);
 }
+
+window.addEventListener('scroll', menuOnScroll);
