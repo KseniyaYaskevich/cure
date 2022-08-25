@@ -1,18 +1,16 @@
 .service {
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+
+  text-align: center;
   background-color: $red-light;
 
-  & .wrapper {
-    padding-top: 10rem;
-    padding-bottom: 4rem;
+  @include media-tablet {
+    position: relative;
 
-    text-align: center;
-
-    @include media-tablet {
-      position: relative;
-
-      padding-bottom: 10rem;
-    }
+    padding-bottom: 10rem;
   }
+
 }
 
 .service__title {
@@ -75,9 +73,8 @@
 
   & span {
     position: absolute;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1;
+
+    @include font($size: 1rem, $height:1, $weight: 600);
     color: $green;
   }
 }
@@ -125,7 +122,7 @@
 
   & span {
     bottom: 50%;
-    right: -5%;
+    right: -12%;
 
     @include media-tablet {
       left: 0;
@@ -207,7 +204,7 @@
 
   & span {
     bottom: 0;
-    right: -30%;
+    right: -40%;
 
     @include media-tablet {
       top: -10%;
@@ -228,7 +225,7 @@
   @include media-tablet {
     position: absolute;
     right: 0;
-    bottom: 15%;
+    bottom: 13%;
 
     display: flex;
     flex-direction: column;
@@ -241,13 +238,14 @@
 
 .service__subtitle {
   position: absolute;
-  top: -310%;
-  left: 10%;
+  top: -370%;
+  left: 19%;
 
   display: flex;
   flex-direction: column;
 
-  @include font($size:2.6rem, $height: 1.4);
+  font-family: $font-family--noe;
+  @include font($size: 2.6rem, $height: 1.4);
   text-align: left;
   color: $white;
 

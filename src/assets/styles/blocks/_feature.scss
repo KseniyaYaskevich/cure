@@ -1,24 +1,16 @@
 .feature {
-  padding-top: 7rem;
-
-  background-color: $gray-light;
-
-  & .wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
   padding: 7rem 1rem 2rem 1rem;
 
   background-color: $gray-light;
 
-    @include media-tablet {
-      position: relative;
+  @include media-tablet {
+    position: relative;
 
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
+    flex-direction: row;
+    justify-content: space-between;
 
     padding: 10rem 3rem 2rem 3rem;
   }
@@ -98,8 +90,6 @@
 }
 
 .feature__title {
-  font-size: 2.5rem;
-  line-height: 1;
   color: $white;
 
   opacity: 0;
@@ -111,14 +101,13 @@
   }
 
   @include media-tablet {
-    margin-left: -4rem;
+    margin-left: -5rem;
   }
 }
 
 .feature__text {
-  font-family: "Sofia Pro";
-  font-size: 0.75rem;
-  line-height: 1.75;
+  font-family: $font-family--sofia;
+  @include font($size: 0.75rem, $height: 1.5);
   color: $gray-middle;
 
   opacity: 0;
@@ -133,7 +122,7 @@
   @include media-tablet {
     width: 50%;
 
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -156,11 +145,12 @@
 
   @include media-tablet {
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 0;
+    z-index: 1;
 
     width: 30%;
-    height: 60%;
+    height: 50%;
     margin: 0;
 
     transform: translateY(0px);
@@ -210,7 +200,7 @@
   z-index: 1;
 
   @include media-tablet {
-    top: -10%;
+    top: -5%;
     left: 35%;
 
     height: 15vw;
