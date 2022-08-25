@@ -1,0 +1,12 @@
+.parallax-bg {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-bg__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
