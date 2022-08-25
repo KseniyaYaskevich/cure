@@ -1,3 +1,5 @@
+import {offset} from "./util";
+
 const navMain = document.querySelector('.main-nav');
 const navToggle = navMain.querySelector('.main-nav__toggle');
 const mainNavList = navMain.querySelector('.main-nav__list');
