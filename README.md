@@ -1,1 +1,1 @@
-# cure
+[Cure](https://kseniyayaskevich.github.io/cure/)
