@@ -27,6 +27,8 @@ const onNavToggleClick = () => {
   document.body.classList.toggle('page__body--lock');
   navMain.classList.toggle('main-nav--opened');
   mainNavList.classList.toggle('_active');
+
+  colorHeader('transparent');
 };
 
 const onMainNavListClick = (evt) => {
