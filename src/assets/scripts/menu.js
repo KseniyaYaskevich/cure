@@ -6,6 +6,17 @@ const navMainInner = document.querySelector('.main-nav__inner');
 const navToggle = navMain.querySelector('.main-nav__toggle');
 const mainNavList = navMain.querySelector('.main-nav__list');
 
+const colorHeader = (sectionColor) => {
+  const navMainColor = window.getComputedStyle(navMainInner).backgroundColor;
+
+  if (navMain.classList.contains('main-nav--opened')) {
+    pageHeader.style.backgroundColor = navMainColor;
+  }
+  if (!navMain.classList.contains('main-nav--opened')) {
+    pageHeader.style.backgroundColor = sectionColor;
+  }
+};
+
 const closeMenu = () => {
   document.body.classList.remove('page__body--lock');
   navMain.classList.remove('main-nav--opened');
