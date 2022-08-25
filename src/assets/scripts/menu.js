@@ -1,6 +1,8 @@
 import {offset} from "./util";
 
+const pageHeader = document.querySelector('.page-header');
 const navMain = document.querySelector('.main-nav');
+const navMainInner = document.querySelector('.main-nav__inner');
 const navToggle = navMain.querySelector('.main-nav__toggle');
 const mainNavList = navMain.querySelector('.main-nav__list');
 
