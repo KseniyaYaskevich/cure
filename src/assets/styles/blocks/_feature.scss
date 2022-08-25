@@ -7,6 +7,10 @@
     display: flex;
     flex-direction: column;
 
+  padding: 7rem 1rem 2rem 1rem;
+
+  background-color: $gray-light;
+
     @include media-tablet {
       position: relative;
 
@@ -16,14 +20,14 @@
     }
   }
 
-  @include media-tablet {
-    padding-top: 10rem;
+    padding: 10rem 3rem 2rem 3rem;
   }
 }
 
 .feature__box {
   height: auto;
   width: 60vw;
+
   margin-left: -1rem;
   overflow: hidden;
 
@@ -34,8 +38,17 @@
   }
 
   @include media-tablet {
-    margin-left: -3rem;
     flex-basis: 40%;
+    height: 46vw;
+    width: auto;
+
+    margin-left: -3rem;
+  }
+
+  @include media-desktop {
+    z-index: 1;
+
+    transform: translateY(4rem);
   }
 }
 
@@ -55,6 +68,8 @@
   display: flex;
   flex-direction: column;
 
+  z-index: 2;
+
   &._active {
     .feature__title {
       opacity: 1;
@@ -73,6 +88,12 @@
 
   @include media-tablet {
     flex-basis: 60%;
+    padding-top: 2rem;
+  }
+
+  @include media-desktop {
+    justify-content: flex-end;
+    padding-top: 0;
   }
 }
 
@@ -144,6 +165,10 @@
 
     transform: translateY(0px);
   }
+
+  @include media-desktop {
+    top: 65%;
+  }
 }
 
 .feature__images {
@@ -190,5 +215,28 @@
 
     height: 15vw;
     width: 45%;
+  }
+}
+
+.feature__dots {
+  position: absolute;
+  top: 1rem;
+  left: 40%;
+  z-index: -1;
+
+  height: 10vw;
+  width: auto;
+
+  @include media-tablet {
+    top: 7.5rem;
+    left: 12.3rem;
+
+    height: 5vw;
+  }
+
+  @include media-desktop {
+    top: 40%;
+    right: 3rem;
+    left: auto;
   }
 }

@@ -16,7 +16,7 @@
 }
 
 .service__title {
-  @include font($size:3.4rem, $height: 1.1);
+  position: relative;
   color: $white;
 
   transform: scale(1.5);
@@ -26,6 +26,26 @@
   &._active {
     transform: scale(1);
     opacity: 1;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: -2rem;
+    left: 40%;
+    z-index: -1;
+
+    height: 6rem;
+    width: 6rem;
+
+    background-image: url("~images/flower.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include media-tablet {
+      left: 45%;
+    }
   }
 }
 
@@ -113,6 +133,63 @@
       right: auto;
     }
   }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    z-index: -1;
+
+    height: 50vw;
+    width: 50vw;
+
+    background-image: url("~images/green-dots-top.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include media-tablet {
+      top: 10%;
+      left: -30%;
+
+      height: 13vw;
+      width: 13vw;
+    }
+
+    @include media-desktop {
+      left: -36%;
+    }
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: -7%;
+    bottom: -5%;
+    z-index: -1;
+
+    height: 15vw;
+    width: 20vw;
+
+    background-image: url("~images/dots.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include media-tablet {
+      top: 55%;
+      right: -71%;
+
+      height: 5vw;
+      width: 10vw;
+    }
+
+    @include media-desktop {
+      top: 57%;
+      right: -74%;
+    }
+  }
 }
 
 .layers-service__layer-3 {
@@ -157,6 +234,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
     width: 40%;
   }
 }
@@ -202,6 +280,7 @@
 
   @include media-tablet {
     align-self: auto;
+    margin-left: -1rem;
   }
 }
 

@@ -1,10 +1,14 @@
 .red-cursive {
   display: inline-block;
 
-  @include font($size: 4.2rem, $weight: 400);
-  font-family: "Northwell";
+  @include font($size: 4.2rem, $height: 0, $weight: 400);
+  font-family: $font-family--northwell;
   white-space: nowrap;
   color: $danger;
 
   transform: translateY(-55%) rotate(-16deg);
+
+  @include media-tablet {
+    font-size: 6rem;
+  }
 }

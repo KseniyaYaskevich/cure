@@ -10,10 +10,12 @@
     height: 44vw;
     width: 43vw;
 
-    transform: translateX(100px);
-    transition: transform 1s ease-out;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 0.5s ease-out;
 
     &._active {
+      opacity: 1;
       transform: translateX(0);
     }
 

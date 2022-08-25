@@ -1,19 +1,21 @@
-.page__body--lock .page-header {
-  @include media-mobile-only {
-    background-color: $gray-light;
-  }
-}
-
 .page-header {
   position: fixed;
   z-index: 10;
 
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  & .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: padding .4s ease-out, background-color .1s ease-out;
+
+  &.is-scrolled {
+    padding: 0.2rem 1rem;
+  }
+
+  @include media-tablet {
+    padding: 2rem 3rem;
   }
 }
 
