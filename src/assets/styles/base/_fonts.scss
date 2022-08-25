@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Noe Display";
   src: url('~fonts/NoeDisplay-Bold.woff2') format('font-woff2'),
-    url('~fonts/NoeDisplay-Bold.woff') format('font-woff');
+    url('~fonts/NoeDisplay-Bold.woff') format('font-woff'),
+    url('~fonts/NoeDisplay-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -20,7 +21,8 @@
 @font-face {
   font-family: "Poppins";
   src: url('~fonts/Poppins-Regular.woff2') format('font-woff2'),
-    url('~fonts/Poppins-Regular.woff') format('font-woff');
+    url('~fonts/Poppins-Regular.woff') format('font-woff'),
+    url('~fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -29,7 +31,8 @@
 @font-face {
   font-family: "Sofia Pro";
   src: url('~fonts/SofiaPro-Regular.woff2') format('font-woff2'),
-    url('~fonts/SofiaPro-Regular.woff') format('font-woff');
+    url('~fonts/SofiaPro-Regular.woff') format('font-woff'),
+    url('~fonts/SofiaPro-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
