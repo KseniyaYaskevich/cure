@@ -16,6 +16,10 @@
 
   @include media-tablet {
     padding: 2rem 3rem;
+
+    &.is-scrolled {
+      padding: 1rem 3rem;
+    }
   }
 }
 
