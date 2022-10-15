@@ -1,6 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+
+// const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+// const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
@@ -29,6 +33,47 @@ const config = {
     splitChunks: {
       chunks: 'all',
     },
+    minimizer: [
+      "...",
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: [
+              ["gifsicle", {
+                interlaced: true
+              }],
+              ["jpegtran", {
+                progressive: true
+              }],
+              ["optipng", {
+                optimizationLevel: 5
+              }],
+              [
+                "svgo",
+                {
+                  plugins: [{
+                    name: "preset-default",
+                    params: {
+                      overrides: {
+                        removeViewBox: false,
+                        addAttributesToSVGElement: {
+                          params: {
+                            attributes: [{
+                              xmlns: "http://www.w3.org/2000/svg"
+                            }, ],
+                          },
+                        },
+                      },
+                    },
+                  }, ],
+                },
+              ],
+            ],
+          },
+        },
+      }),
+    ],
   },
   devtool: 'source-map',
   devServer: {
@@ -48,6 +93,26 @@ const config = {
     new MiniCssExtractPlugin({
       filename: './css/[contenthash].css',
     }),
+    // new ImageminWebpWebpackPlugin({
+    //   config: [{
+    //     test: /\.(jpe?g|png)/,
+    //     options: {
+    //       quality: 85
+    //     }
+    //   }],
+    //   overrideExtension: true,
+    //   strict: true
+    // }),
+    // new FileManagerPlugin({
+    //   events: {
+    //     onEnd: {
+    //       copy: [{
+    //         source: './dist/assets/images/*.webp',
+    //         destination: './src/assets/images/webp/',
+    //       }, ],
+    //     },
+    //   },
+    // }),
   ],
   performance: {
     maxAssetSize: 1000000,
@@ -95,17 +160,17 @@ const config = {
         ],
       },
       {
-        test: /\.(png|jpe?g|svg|gif)$/i,
+        test: /\.(png|jpe?g|svg|gif|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext][query]',
+          filename: 'assets/images/[name][ext]',
         },
       },
       {
         test: /\.(ttf|woff2|woff|eot)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[hash][ext]',
+          filename: 'assets/fonts/[name][ext]',
         },
       },
     ],
