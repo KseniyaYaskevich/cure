@@ -27,6 +27,7 @@
   margin-left: 2rem;
 
   background-image: url("~images/acquaintance/hands.jpg");
+  background-image: -webkit-image-set(url("~images/acquaintance/hands.webp") 1x);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -63,6 +64,7 @@
   height: 44vw;
 
   background-image: url("~images/acquaintance/cheek.jpg");
+  background-image: -webkit-image-set(url("~images/acquaintance/cheek.webp") 1x);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;

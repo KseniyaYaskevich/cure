@@ -37,7 +37,8 @@
     height: 6rem;
     width: 6rem;
 
-    background-image: url("~images/flower.png");
+    background-image: url("~images/service/flower.png");
+    background-image: -webkit-image-set(url("~images/service/flower.webp") 1x);
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -143,6 +144,7 @@
     width: 50vw;
 
     background-image: url("~images/green-dots-top.png");
+    background-image: -webkit-image-set(url("~images/green-dots-top.webp") 1x);
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -171,6 +173,7 @@
     width: 20vw;
 
     background-image: url("~images/dots.png");
+    background-image: -webkit-image-set(url("~images/dots.webp") 1x);
     background-repeat: no-repeat;
     background-size: contain;
 
