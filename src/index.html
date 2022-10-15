@@ -42,8 +42,15 @@
   <main class="page-main">
     <section class="start-screen">
       <div class="start-screen__parallax-bg parallax-bg">
-        <img class="parallax-bg__img" src="~images/start-screen/bg-main.png"
-          alt="Photo of two hands touching each other">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="~images/start-screen/bg-main-desktop.webp" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="~images/start-screen/bg-main-desktop.png" type="image/png">
+          <source media="(min-width: 768px)" srcset="~images/start-screen/bg-main-tablet.webp" type="image/webp">
+          <source media="(min-width: 768px)" srcset="~images/start-screen/bg-main-tablet.png" type="image/png">
+          <source srcset="~images/start-screen/bg-main-mobile.webp" type="image/webp">
+          <img class="parallax-bg__img" src="~images/start-screen/bg-main-mobile.png"
+            alt="Two hands touching each other" width="320" height="900">
+        </picture>
       </div>
       <h1 class="start-screen__title start-screen__title--mobile">
         <span>Build <strong class="red-cursive">your own</strong>
@@ -60,7 +67,10 @@
         <div class="layers-acquaintance__layer-1" data-type="anim-item" data-anim-start="40">
           <div class="layers-acquaintance__inner">
             <div class="layers-acquaintance__layer-2" data-type="parallax" data-depth="0.10">
-              <img src="~images/acquaintance/drawn-hand.png" alt="Picture of a female hand" width="269" height="269">
+              <picture>
+                <source srcset="~images/acquaintance/drawn-hand.webp" type="image/webp">
+                <img src="~images/acquaintance/drawn-hand.png" alt="Picture of a female hand" width="269" height="269">
+              </picture>
               <span class="red-cursive">Cure</span>
             </div>
           </div>
@@ -76,10 +86,16 @@
           <a class="acquaintance__link" href="#!">+</a>
         </p>
       </div>
-      <img class="acquaintance__img acquaintance__img--group" src="~images/grey-green-group.png"
-        alt="Picture of a female hand" width="150" height="150">
-      <img class="acquaintance__img acquaintance__img--dots" src="~images/dots.png" alt="Picture of dots" width="50"
-        height="50">
+      <picture>
+        <source srcset="~images/grey-green-group.webp" type="image/webp">
+        <img class="acquaintance__img acquaintance__img--group" src="~images/grey-green-group.png"
+          alt="Picture of abstract" width="150" height="150">
+      </picture>
+      <picture>
+        <source srcset="~images/dots.webp" type="image/webp">
+        <img class="acquaintance__img acquaintance__img--dots" src="~images/dots.png" alt="Picture of abstracts"
+          width="50" height="50">
+      </picture>
     </section>
     <!-- /.acquaintance -->
     <section class="two-images" data-type="anim-item" data-anim-start="40">
@@ -91,14 +107,20 @@
         <div class="two-images__layer two-images__layer-2">
         </div>
       </div>
-      <img src="~images/two-images/hand-n-glass.jpg" alt="Photo of a woman's hand with a glass of water" width="180"
-        height="204" data-type="anim-item" data-anim-start="4">
+      <picture>
+        <source srcset="~images/two-images/hand-n-glass.webp" type="image/webp">
+        <img src="~images/two-images/hand-n-glass.jpg" alt="Photo of a woman's hand with a glass of water" width="180"
+          height="204" data-type="anim-item" data-anim-start="4">
+      </picture>
     </section>
     <!-- /.two-images -->
     <section class="feature">
       <div class="feature__box" data-type="anim-item" data-anim-start="40">
-        <img class="feature__layer" src="~images/feature/four-hands.png" alt="Photo of four hands" width="190"
-          height="225">
+        <picture>
+          <source srcset="~images/feature/four-hands.webp" type="image/webp">
+          <img class="feature__layer" src="~images/feature/four-hands.png" alt="Photo of four hands" width="190"
+            height="225">
+        </picture>
       </div>
       <div class="feature__desc" data-type="anim-item" data-anim-start="2">
         <h2 class="feature__title">
@@ -118,14 +140,23 @@
       <div class="feature__inner">
         <div class="feature__images">
           <div class="feature__image feature__image-1">
-            <img src="~images/feature/flower.jpg" alt="Photo of a woman's hand with a glass of water" width="180"
-              height="204">
+            <picture>
+              <source srcset="~images/feature/girl-with-flower.webp" type="image/webp">
+              <img src="~images/feature/girl-with-flower.jpg" alt="Photo of a girl with flower" width="180"
+                height="204">
+            </picture>
           </div>
           <div class="feature__image feature__image-2">
-            <img src="~images/feature/girl.jpg" alt="Photo of a woman's hand with a glass of water" width="180"
-              height="204">
+            <picture>
+              <source srcset="~images/feature/girl.webp" type="image/webp">
+              <img src="~images/feature/girl.jpg" alt="Photo of a girl with hands clasped in front of her face"
+                width="180" height="204">
+            </picture>
           </div>
-          <img class="feature__dots" src="~images/dots.png" alt="Photo of dots" width="50" height="50">
+          <picture>
+            <source srcset="~images/dots.webp" type="image/webp">
+            <img class="feature__dots" src="~images/dots.png" alt="Photo of dots" width="50" height="50">
+          </picture>
         </div>
       </div>
     </section>
@@ -134,15 +165,24 @@
       <h3 class="service__title" data-type="anim-item" data-anim-start="2">Our Services</h3>
       <div class="service__layers layers-service" data-type="anim-item" data-anim-start="40">
         <div class="layers-service__layer layers-service__layer-1" data-type="parallax" data-depth="0.10">
-          <img src="~images/service/img-our-services-1.jpg" alt="Picture of a female hand" width="170" height="205">
+          <picture>
+            <source srcset="~images/service/img-our-services-1.webp" type="image/webp">
+            <img src="~images/service/img-our-services-1.jpg" alt="Picture of a female hand" width="170" height="205">
+          </picture>
           <span>Pedis</span>
         </div>
         <div class="layers-service__layer layers-service__layer-2">
-          <img src="~images/service/img-our-services-2.jpg" alt="Picture of a female foots" width="254" height="339">
+          <picture>
+            <source srcset="~images/service/img-our-services-2.webp" type="image/webp">
+            <img src="~images/service/img-our-services-2.jpg" alt="Picture of a female foots" width="254" height="339">
+          </picture>
           <span>Manis</span>
         </div>
         <div class="layers-service__layer layers-service__layer-3" data-type="parallax" data-depth="0.10">
-          <img src="~images/service/img-our-services-3.jpg" alt="Picture of a wax" width="170" height="205">
+          <picture>
+            <source srcset="~images/service/img-our-services-3.webp" type="image/webp">
+            <img src="~images/service/img-our-services-3.jpg" alt="Picture of a wax" width="170" height="205">
+          </picture>
           <span>Waxing</span>
         </div>
       </div>
@@ -184,37 +224,80 @@
             <span>Check All <br>Products</span>
           </a>
           <div class="products__slide swiper-slide slide">
-            <img class="slide__image" src="~images/products/Berry-Preserve.png" alt="" width="160" height="225">
+            <picture>
+              <source srcset="~images/products/Berry-Preserve.webp" type="image/webp">
+              <img class="slide__image" src="~images/products/Berry-Preserve.png" alt="Berry Preserve product image"
+                width="160" height="225">
+            </picture>
             <span class="slide__label red-cursive">Feet</span>
-            <img class="slide__background slide__background--grey-group" src="~images/grey-group.png"
-              alt="Picture of grey-dots" width="146" height="144">
+            <picture>
+              <source srcset="~images/grey-group.webp" type="image/webp">
+              <img class="slide__background slide__background--grey-group" src="~images/grey-group.png"
+                alt="Picture of grey-dots" width="146" height="144">
+            </picture>
           </div>
           <div class="products__slide swiper-slide slide">
-            <img class="slide__image" src="~images/products/Minty-Matcha.png" alt="" width="160" height="225">
-            <img class="slide__background slide__background--grey-dots" src="~images/grey-dots.png"
-              alt="Picture of grey-dots" width="146" height="144">
+            <picture>
+              <source srcset="~images/products/Minty-Matcha.webp" type="image/webp">
+              <img class="slide__image" src="~images/products/Minty-Matcha.png" alt="Minty Matcha product image"
+                width="160" height="225">
+            </picture>
+            <picture>
+              <source srcset="~images/grey-dots.webp" type="image/webp">
+              <img class="slide__background slide__background--grey-dots" src="~images/grey-dots.png"
+                alt="Picture of grey-dots" width="146" height="144">
+            </picture>
           </div>
           <div class="products__slide swiper-slide slide">
-            <img class="slide__image" src="~images/products/Citrus-Peel.png" alt="" width="160" height="225">
+            <picture>
+              <source srcset="~images/products/Citrus-Peel.webp" type="image/webp">
+              <img class="slide__image" src="~images/products/Citrus-Peel.png" alt="Citrus Peel product image"
+                width="160" height="225">
+            </picture>
             <span class="slide__label red-cursive">Handy</span>
           </div>
           <div class="products__slide swiper-slide slide">
-            <img class="slide__image" src="~images/products/Liquid-Gold-Oil.png" alt="" width="160" height="225">
-            <img class="slide__background slide__background--grey-group" src="~images/grey-group.png"
-              alt="Picture of grey-dots" width="146" height="144">
-            <img class="slide__background slide__background--grey-dots" src="~images/grey-dots.png"
-              alt="Picture of grey-dots" width="146" height="144">
+            <picture>
+              <source srcset="~images/products/Liquid-Gold-Oil.webp" type="image/webp">
+              <img class="slide__image" src="~images/products/Liquid-Gold-Oil.png" alt="Liquid Gold Oil product image"
+                width="160" height="225">
+            </picture>
+            <picture>
+              <source srcset="~images/grey-group.webp" type="image/webp">
+              <img class="slide__background slide__background--grey-group" src="~images/grey-group.png"
+                alt="Picture of grey-dots" width="146" height="144">
+            </picture>
+            <picture>
+              <source srcset="~images/grey-dots.webp" type="image/webp">
+              <img class="slide__background slide__background--grey-dots" src="~images/grey-dots.png"
+                alt="Picture of grey-dots" width="146" height="144">
+            </picture>
           </div>
           <div class="products__slide swiper-slide slide">
-            <img class="slide__image" src="~images/products/Omega-Strawberry.png" alt="" width="160" height="225">
+            <picture>
+              <source srcset="~images/products/Omega-Strawberry.webp" type="image/webp">
+              <img class="slide__image" src="~images/products/Omega-Strawberry.png" alt="Omega Strawberry product image"
+                width="160" height="225">
+            </picture>
           </div>
           <div class="products__slide swiper-slide slide">
-            <img class="slide__image" src="~images/products/Skin-Haven-Lotion.png" alt="" width="160" height="225">
-            <img class="slide__background slide__background--grey-dots" src="~images/grey-dots.png"
-              alt="Picture of grey-dots" width="146" height="144">
+            <picture>
+              <source srcset="~images/products/Skin-Haven-Lotion.webp" type="image/webp">
+              <img class="slide__image" src="~images/products/Skin-Haven-Lotion.png"
+                alt="Skin Haven Lotion product image" width="160" height="225">
+            </picture>
+            <picture>
+              <source srcset="~images/grey-dots.webp" type="image/webp">
+              <img class="slide__background slide__background--grey-dots" src="~images/grey-dots.png"
+                alt="Picture of grey-dots" width="146" height="144">
+            </picture>
           </div>
           <div class="products__slide swiper-slide slide">
-            <img class="slide__image" src="~images/products/The-Carrot-Taker-Balm.png" alt="" width="160" height="225">
+            <picture>
+              <source srcset="~images/products/The-Carrot-Taker-Balm.webp" type="image/webp">
+              <img class="slide__image" src="~images/products/The-Carrot-Taker-Balm.png"
+                alt="The Carrot Taker product image" width="160" height="225">
+            </picture>
           </div>
         </div>
       </div>
@@ -227,14 +310,23 @@
           <span class="slogan__red-line"></span>
           <h2 class="slogan__title slogan__title--second-part">for&nbsp;unpolished <br>nails.</h2>
           <div class="layers-slogan__layer layers-slogan__layer-2">
-            <img src="~images/slogan/img-life-is-too.jpg" alt="Picture of a woman" width="240" height="320">
+            <picture>
+              <source srcset="~images/slogan/img-life-is-too.webp" type="image/webp">
+              <img src="~images/slogan/img-life-is-too.jpg" alt="Picture of a woman" width="240" height="320">
+            </picture>
           </div>
           <span class="red-cursive">Cure</span>
           <div class="layers-slogan__layer layers-slogan__layer-3">
-            <img src="~images/grey-red-group.png" alt="Gray-red group abstract" width="198" height="224">
+            <picture>
+              <source srcset="~images/grey-red-group.webp" type="image/webp">
+              <img src="~images/grey-red-group.png" alt="Picture of gray-red group" width="198" height="224">
+            </picture>
           </div>
           <div class="layers-slogan__layer layers-slogan__layer-4">
-            <img src="~images/dots.png" alt="Picture of dots" width="81" height="75">
+            <picture>
+              <source srcset="~images/dots.webp" type="image/webp">
+              <img src="~images/dots.png" alt="Picture of dots" width="81" height="75">
+            </picture>
           </div>
         </div>
       </div>
@@ -245,7 +337,15 @@
   <footer class="page-footer">
     <div class="page-footer__heading heading-footer">
       <div class="heading-footer__parallax-bg parallax-bg">
-        <img class="parallax-bg__img" src="~images/bg-footer.png" alt="Photo of two persons standing with their backs">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="~images/footer/bg-footer-desktop.webp" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="~images/footer/bg-footer-desktop.png" type="image/png">
+          <source media="(min-width: 768px)" srcset="~images/footer/bg-footer-tablet.webp" type="image/webp">
+          <source media="(min-width: 768px)" srcset="~images/footer/bg-footer-tablet.png" type="image/png">
+          <source srcset="~images/footer/bg-footer-mobile.webp" type="image/webp">
+          <img class="parallax-bg__img" src="~images/footer/bg-footer-mobile.png"
+            alt="Photo of two persons standing with their backs" width="320" height="900">
+        </picture>
       </div>
       <div class="heading-footer__inner">
         <p class="heading-footer__text">Calling all Nail Techs <br>and Waxing Specialists</p>
